@@ -1,0 +1,20 @@
+@import '_mynormalize';
+@import '_variebles';
+@import '_animations';
+
+.container {
+	width: 1140px;
+	margin: 0 auto;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+@import '_tarif';
+@import '_slider';
+@import '_questions';
+@import '_footer';
+
+@import '_media';
+

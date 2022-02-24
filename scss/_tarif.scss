@@ -1,0 +1,90 @@
+.tarif {
+	&__block {
+		margin-top: 95px;
+	}
+	&__title {
+		font-size: 34px;
+		line-height: 50px;
+		text-align: center;
+	}
+	&__blocks {
+		margin-top: 76px;
+		display: grid;
+		grid-template-columns: 375px 750px;
+		column-gap: 15px;
+	}
+}
+
+.tires {
+	background: #f9f9f9;
+	border: 1px solid #f0f0f0;
+	padding: 40px 0 59px 50px;
+	&__title {
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 31px;
+	}
+	&__descr {
+		margin-top: 10px;
+		font-size: 16px;
+		line-height: 26px;
+		max-width: 293px;
+	}
+	&__subtitle {
+		margin-top: 30px;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-top: 73px;
+		color: white;
+		width: 209px;
+		height: 40px;
+		border-radius: 6px;
+		font-size: 18px;
+		line-height: 22px;
+		background-color: $second-color;
+	}
+}
+
+.tarifs {
+	display: grid;
+	// grid-template-rows: 126px 126px 173px;
+	row-gap: 6px;
+	&__seasons {
+		padding: 14px 0 0 16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		background: #f9f9f9;
+		border: 1px solid #f0f0f0;
+	}
+	&__left {
+		display: flex;
+		align-items: center;
+	}
+	&__img {
+		margin-right: 5px;
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 30px;
+	}
+	&__right {
+		padding: 0 40px 15px 0;
+		width: 408px;
+	}
+	&__list {
+		&-item {
+			list-style: disc;
+			font-size: 14px;
+			line-height: 24px;
+			color: #555555;
+		}
+	}
+}
