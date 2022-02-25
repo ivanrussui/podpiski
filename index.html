@@ -253,11 +253,11 @@
 
 					<form action="#" id="form" class="form">
 						<div class="form__input">
-							<input name="name" id="name" type="text" placeholder="Имя">
+							<input required name="name" id="name" type="text" placeholder="Имя">
 							<label class="label_basic" for="name"></label>
 						</div>
 						<div class="form__input">
-							<input name="phone" id="phone" placeholder="Телефон">
+							<input required name="phone" id="phone" placeholder="Телефон">
 							<label class="label_basic" for="phone"></label>
 						</div>
 						<div class="form__textarea">
@@ -266,21 +266,91 @@
 						</div>
 						<div class="form__policy">
 							<input name="checkbox" checked id="checkbox" type="checkbox">
-								<span>	Я согласен с обработкой
+							<span> Я согласен с обработкой
 								<a target="_blank" href="https://koleso.ru/pages/soglashenie-na-obrabotku-personalnyih-dannyih/">
 									персональных данных
 								</a>
 							</span>
-								<!-- <a target="_blank" href="https://koleso.ru/pages/soglashenie-na-obrabotku-personalnyih-dannyih/">
-									персональных данных
-								</a> -->
-							
 						</div>
 						<button type="submit" class="btn form__btn">Отправить</button>
 					</form>
 
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section class="manager">
+		<div class="container">
+			<div class="manager__block">
+				<div class="manager__left">
+					<div class="manager__img">
+						<img src="./img/manager-bg.png" alt="manager">
+					</div>
+				</div>
+				<div class="manager__right">
+					<h2 class="manager__title">
+						Персональный менеджер на связи
+					</h2>
+					<ul class="manager__list">
+						<li class="manager__list-item">
+							ответит на вопросы
+						</li>
+						<li class="manager__list-item">
+							поможет с подбором шин
+						</li>
+						<li class="manager__list-item">
+							посоветует удобный для Вас шинный центр
+						</li>
+						<li class="manager__list-item">
+							запишет на шиномонтаж
+						</li>
+						<li class="manager__list-item">
+							даст оперативный совет в сложной ситуации
+						</li>
+					</ul>
+					<div class="manager__btn btn">
+						Заказать звонок
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="map">
+		<div class="container">
+			<div class="map__block">
+				<div class="map__blocks">
+					<div class="map__left">
+						<h2 class="map__title">Большая сеть шинных и сервисных центров КОЛЕСО.ру в Москве и Санкт-Петербурге</h2>
+						<div class="map__btn">Скрыть карту</div>
+						<div class="map__input">
+							<input checked type="radio" id="contactChoice1" name="contact" value="msk">
+							<label for="contactChoice1">Москва</label>
+							<input type="radio" id="contactChoice2" name="contact" value="spb">
+							<label for="contactChoice2">Санкт-Петербург</label>
+						</div>
+					</div>
+
+					<div class="map__right">
+						<div class="map__img">
+							<img src="./img/map-bg.svg" alt="map">
+						</div>
+					</div>
+				</div>
+
+				<div class="map__msk">
+					<script type="text/javascript" charset="utf-8" async
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A438a676d4f09201f87ab29be69cdd12e04f16a182afc2b182a1850a79d8f99fe&amp;width=1040&amp;height=460&amp;lang=ru_RU&amp;scroll=true">
+					</script>
+				</div>
+				<!-- <div class="map__spb">
+<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad609fc6fd4745f2a6a8d83f18bf59c9e58bfa51d7aa8c53943b080653b0325e4&amp;width=1040&amp;height=460&amp;lang=ru_RU&amp;scroll=true"></script>
+				</div> -->
+
+			</div>
+
+
 		</div>
 	</section>
 

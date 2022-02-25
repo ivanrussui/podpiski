@@ -35,6 +35,8 @@
 			width: 360px;
 			height: 40px;
 			padding-left: 12px;
+			border: 1px solid #E5E9FE;
+			border-radius: 6px;
 		}
 	}
 	&__textarea {
@@ -44,12 +46,18 @@
 			height: 120px;
 			resize: none;
 			padding: 11px 0 0 12px;
+			border: 1px solid #E5E9FE;
+			border-radius: 6px;
 		}
 	}
 	&__policy {
 		margin-top: 24px;
 		display: flex;
 		align-items: center;
+		input {
+			width: 16px;
+			height: 16px;
+		}
 		span {
 			margin-left: 6px;
 			// display: inline-block;

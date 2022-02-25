@@ -1,0 +1,48 @@
+.manager {
+	// margin-top: 95px;
+	margin-top: 161px;
+
+	// padding-top: 54px;
+	&__block {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		background: #f3f4fd;
+		border: 1px solid #f0f0f0;
+		border-radius: 6px;
+		// align-items: center;
+	}
+	&__img {
+		padding-left: 47px;
+		img {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+	&__right {
+		padding-right: 86px;
+	}
+	&__title {
+		margin-top: 40px;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 31px;
+	}
+	&__list {
+		margin-top: 10px;
+		padding-left: 25px;
+		&-item {
+			list-style: disc;
+			font-size: 16px;
+			line-height: 32px;
+			color: #383838;
+		}
+	}
+	&__btn {
+		margin-top: 30px;
+		width: 181px;
+		height: 40px;
+		cursor: pointer;
+		margin-bottom: 33px;
+	}
+}
