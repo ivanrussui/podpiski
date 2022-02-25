@@ -1,0 +1,150 @@
+.causes {
+	margin-top: 90px;
+	&__title {
+		font-weight: bold;
+		font-size: 40px;
+		line-height: 60px;
+	}
+	&__block {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__rigth {
+		width: 360px;
+		&_t {
+			margin-top: 63px;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 31px;
+		}
+		&_subt {
+			margin-top: 20px;
+			font-size: 16px;
+			line-height: 32px;
+			color: #383838;
+		}
+	}
+}
+
+.form {
+	margin-top: 14px;
+	&__input {
+		input {
+			margin-bottom: 20px;
+			background: #f3f4fd;
+			width: 360px;
+			height: 40px;
+			padding-left: 12px;
+		}
+	}
+	&__textarea {
+		textarea {
+			background: #f3f4fd;
+			width: 360px;
+			height: 120px;
+			resize: none;
+			padding: 11px 0 0 12px;
+		}
+	}
+	&__policy {
+		margin-top: 24px;
+		display: flex;
+		align-items: center;
+		span {
+			margin-left: 6px;
+			// display: inline-block;
+			font-size: 13px;
+			line-height: 16px;
+			color: #383838;
+			a {
+				font-size: 13px;
+				line-height: 16px;
+				color: $second-color;
+			}
+		}
+	}
+	&__btn {
+		margin-top: 41px;
+		width: 181px;
+		height: 40px;
+	}
+}
+
+// input, textarea {
+// 	background: #F3F4FD;
+// }
+
+.cause {
+	position: relative;
+	// margin-top: 60px;
+	// margin-left: 95px;
+	margin: 60px 0px 0 95px;
+	// margin: 60px 170px 0 95px;
+	&__cause {
+		position: absolute;
+		z-index: 2;
+		top: 15px;
+		left: -96px;
+		padding: 9px 0 13px 13px;
+		background: rgba(255, 255, 255, 0.92);
+		box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.25);
+		border-radius: 6px;
+		width: 235px;
+	}
+	&__up {
+		display: flex;
+		align-items: center;
+	}
+	span {
+		margin-right: 7px;
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		background: #6438c6;
+		border-radius: 100%;
+	}
+	&__two {
+		// top: 16px;
+		left: auto;
+		right: -97px;
+		// left: 358px;
+		span {
+			background: #2e44ec;
+		}
+	}
+	&__three {
+		width: 177px;
+		left: auto;
+		right: -97px;
+		top: 228px;
+		span {
+			background: #9020d9;
+		}
+	}
+	&__four {
+		top: auto;
+		bottom: -19px;
+		left: 52%;
+		transform: translateX(-50%);
+		span {
+			background: #cf197b;
+		}
+	}
+	&__five {
+		width: 177px;
+		top: 228px;
+		span {
+			background: #9d28b6;
+		}
+	}
+	&__title {
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 30px;
+	}
+	&__text {
+		font-size: 14px;
+		line-height: 22px;
+		color: #383838;
+	}
+}

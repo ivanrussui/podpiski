@@ -1,0 +1,28 @@
+.benefit {
+	margin: 67px 180px 72px;
+	&__blocks {
+		display: flex;
+		// width: 33%;
+		align-items: center;
+		justify-content: space-evenly;
+		// justify-content: space-between;
+	}
+	&__block {
+		// width: 230px;
+		max-width: 245px;
+		text-align: center;
+	}
+	&__title {
+		margin-top: 25px;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 31px;
+	}
+	&__descr {
+		margin-top: 10px;
+		font-size: 16px;
+		line-height: 24px;
+		text-align: center;
+		color: #383838;
+	}
+}

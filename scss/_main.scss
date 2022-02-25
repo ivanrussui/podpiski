@@ -1,0 +1,31 @@
+.main {
+	background: url("../img/main-bg.jpg") no-repeat center center / cover;
+	min-height: 550px;
+	&__text {
+		padding-top: 87px;
+	}
+	&__title {
+		// margin-top: 87px;
+		// padding-top: 87px;
+		font-size: 40px;
+		line-height: 56px;
+		// max-width: 558px;
+		// color: #000000;
+	}
+	&__descr {
+		margin-top: 20px;
+		font-size: 18px;
+		line-height: 30px;
+		color: #383838;
+		max-width: 556px;
+	}
+	&__btn {
+		margin-top: 50px;
+		width: 235px;
+		height: 50px;
+		letter-spacing: 0.05em;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 22px;
+	}
+}

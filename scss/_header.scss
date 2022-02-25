@@ -1,0 +1,90 @@
+.header__up {
+	background: #efefef;
+}
+
+.links {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0;
+	// background: #EFEFEF;
+	&__koleso {
+		display: flex;
+		align-items: center;
+		font-size: 13px;
+		line-height: 17px;
+		color: $second-color;
+		img {
+			margin-right: 3px;
+		}
+	}
+	&__auto {
+		font-size: 13px;
+		line-height: 17px;
+		color: rgba(85, 85, 85, 0.69);
+		&:nth-child(2) {
+			margin: 0 60px;
+		}
+	}
+	&__actions {
+		// display: flex;
+		// align-items: center;
+		font-size: 13px;
+		line-height: 17px;
+		color: rgba(85, 85, 85, 0.69);
+		// img {
+		// 	display: flex;
+		// align-items: center;
+		// }
+	}
+}
+
+.nav {
+	// position: fixed;
+	margin: 22px auto;
+	// padding: 22px auto 2px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+	&__left {
+		display: flex;
+		align-items: center;
+	}
+	&__tires {
+		margin-left: 37px;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 21px;
+		color: #000000;
+		display: flex;
+		align-items: center;
+		span {
+			margin-left: 3px;
+			background: $third-color;
+			border-radius: 10px;
+			color: white;
+			font-size: 12px;
+			line-height: 16px;
+			padding: 0 5px;
+		}
+	}
+	&__right {
+		display: flex;
+		align-items: center;
+		// justify-content: space-between;
+	}
+	&__link {
+		margin-left: 47px;
+		font-weight: bold;
+		font-size: 16px;
+		line-height: 21px;
+		color: #000000;
+	}
+	&__btn {
+		margin-left: 41px;
+		font-size: 16px;
+		width: 171px;
+		height: 40px;
+	}
+}
