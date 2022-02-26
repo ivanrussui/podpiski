@@ -16,23 +16,42 @@ questionsListItem.forEach((item) => {
 
 
 
-// Tiny Slider
-const slider = tns({
-  container: '.carousel__inner',
-  items: 1,
-  slideBy: 'page',
-	mouseDrag: true,
-	controls: false,
-	// navPosition: bottom
+// // Tiny Slider
+// const slider = tns({
+//   container: '.carousel__inner',
+//   items: 1,
+//   slideBy: 'page',
+// 	mouseDrag: true,
+// 	controls: false,
+// 	// navPosition: bottom
+// });
+
+// const slider2 = tns({
+//   container: '.carousel__inner2',
+//   items: 1,
+//   slideBy: 'page',
+// 	mouseDrag: true,
+// 	controls: false,
+// 	// navPosition: bottom
+// });
+
+
+// menu 
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+const menuClose = document.querySelector('.menu__close');
+const bodyLock = document.querySelector('body');
+
+console.log(hamburger);
+
+hamburger.addEventListener('click', () => {
+  menu.classList.add('active');
+  bodyLock.classList.add('lock');
 });
 
-const slider2 = tns({
-  container: '.carousel__inner2',
-  items: 1,
-  slideBy: 'page',
-	mouseDrag: true,
-	controls: false,
-	// navPosition: bottom
+menuClose.addEventListener('click', () => {
+  menu.classList.remove('active');
+  bodyLock.classList.remove('lock');
 });
 
 // slider 
@@ -43,7 +62,7 @@ const historyLink3 = document.querySelector('.history__link3');
 const historyLink4 = document.querySelector('.history__link4');
 const overlay = document.querySelector('.overlay');
 const sliderBlock2 = document.querySelector('.slider__block2');
-const bodyLock = document.querySelector('body');
+// const bodyLock = document.querySelector('body');
 const questionsList = document.querySelector('.questions__list');
 const tns1Ow = document.querySelector('#tns1-ow');
 

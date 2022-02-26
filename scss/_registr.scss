@@ -1,26 +1,31 @@
 .registr {
+	padding: 53px 0 78px;
+	// background: url("../img/phone-bg.jpg") no-repeat top center / cover;
 	background: $main-color;
 	color: white;
-	&__blocks {
-		display: flex;
-		// align-items: center;
-		justify-content: space-between;
-	}
+	// min-height: 640px;
+	position: relative;
+	// &__blocks {
+	// 	display: flex;
+	// 	// align-items: center;
+	// 	justify-content: space-between;
+	// }
 	&__title {
-		margin-top: 53px;
+		// padding-top: 53px;
 		font-size: 34px;
 		line-height: 52px;
-		// max-width: 604px;
+		max-width: 604px;
 	}
 	&__points {
 		position: relative;
 		// margin-top: 40px;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		// align-items: center;
+		max-width: 548px;
 		&::before {
 			position: absolute;
-			content: '';
+			content: "";
 			display: block;
 			z-index: 2;
 			background-color: #fff;
@@ -42,21 +47,6 @@
 		border-radius: 100%;
 		position: relative;
 		z-index: 333;
-		// &::before {
-		// 	position: absolute;
-		// 	content: '';
-		// 	display: block;
-		// 	z-index: 2;
-		// 	background-color: #fff;
-		// 	width: 1px;
-		// 	height: 63px;
-		// 	top: 30px;
-		// 	left: 20px;
-		// }
-		// margin-bottom: 30px;
-		// &:nth-child(3) {
-		// 	margin-bottom: 30px;
-		// }
 	}
 	&__point {
 		margin-top: 40px;
@@ -64,15 +54,16 @@
 		align-items: center;
 		// align-items: baseline;
 		// align-items: initial;
-		&:last-child .registr__number {
-			margin-bottom: 25px;
-		}
+		// &:last-child .registr__number {
+		// 	margin-bottom: 25px;
+		// }
 	}
 	&__btn {
 		// margin-top: 52px;
 		// margin-left: 60px;
 		margin: 52px 0 0 60px;
 		letter-spacing: 0.05em;
+		text-transform: uppercase;
 	}
 
 	&__text {
@@ -84,7 +75,179 @@
 			text-decoration: underline;
 		}
 	}
-	&__right {
-		margin-left: -10px;
+	&__img {
+		width: 643px;
+		height: 643px;
+		// display: block;
+		position: absolute;
+		z-index: 2222;
+		right: 31px;
+		top: 18px;
+		// background: url("../img/phone-bg.png") no-repeat center center / cover;
+	}
+	// &__right {
+	// 	margin-left: -10px;
+	// }
+}
+
+@media (max-width: 1200px) {
+	.registr {
+		// padding: 35px 0 52px;
+		&__img {
+			right: 0;
+			width: 500px;
+			height: 500px;
+		}
 	}
 }
+
+@media (max-width: 992px) {
+	.registr {
+		&__title {
+			font-size: 26px;
+			line-height: 36px;
+			max-width: 420px;
+		}
+		&__points {
+			max-width: 420px;
+			&::before {
+				height: 180px;
+			}
+		}
+
+		// &__point:last-child .registr__number {
+		// 	margin-bottom: 15px;
+		// }
+		&__text {
+			font-size: 14px;
+			line-height: 20px;
+		}
+		&__btn {
+			margin-top: 40px;
+			width: 240px;
+			height: 44px;
+			letter-spacing: normal;
+			text-transform: none;
+			font-size: 16px;
+			line-height: 20px;
+		}
+		&__img {
+			width: 420px;
+			height: 420px;
+			top: 44px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.registr {
+		// &__title {}
+		// margin: auto;
+		padding-bottom: 150px;
+		&__points {
+			max-width: none;
+		}
+		// &__point {
+		// 	align-items: baseline;
+		// }
+		// &__text {
+		// 	margin-top: -15px;
+		// }
+		&__img {
+			// display: none;
+			top: auto;
+			bottom: 0;
+			// left: 50%;
+			// transform: translateX(-50%);
+			right: auto;
+			width: 320px;
+			height: 145px;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.registr {
+		padding-top: 24px;
+		&__title {
+			margin: 0 auto;
+			max-width: 296px;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 27px;
+			text-align: center;
+		}
+		&__point {
+			margin-top: 24px;
+		}
+		&__points::before {
+			height: 140px;
+		}
+		&__text {
+			margin-left: 12px;
+			font-size: 14px;
+			line-height: 20px;
+		}
+		&__number {
+			width: 30px;
+			height: 30px;
+		}
+		&__btn {
+			margin: 24px auto 6px;
+			height: 48px;
+			font-size: 16px;
+			line-height: 20px;
+		}
+		&__img {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
+
+@media (max-width: 376px) {
+	.registr {
+		&__points::before {
+			height: 165px;
+		}
+	}
+}
+
+// 	.registr__blocks {
+// 		// display: block;
+// 	}
+// }
+// @media (max-width: 1200px) {
+// 	.registr {
+// 		margin-top: 35px;
+// 		&__blocks {
+// 			position: relative;
+// 		}
+// 		&__left {
+// 			width: 420px;
+// 		}
+// 		&__right {
+// 			position: relative;
+// 			left: 20px;
+// 			// display: none;
+// 			// &_mob {
+// 			// 	position: relative;
+// 			// 	z-index: 55;
+// 			// 	background: url("../img/phone-bg-plans.png") no-repeat center center / cover;
+// 			// }
+// 			// &__img {
+// 			// 	img {
+// 			// 		display: none;
+// 			// 	}
+// 			// }
+// 		}
+// 	}
+// }
+
+// @media (max-width: 1200px) {
+// 	.registr__blocks{
+// 		position: relative;
+// 		z-index: 55;
+// 		background: url("../img/phone-bg-plans.png") no-repeat center center / cover;
+// 	}
+// }
