@@ -1189,6 +1189,108 @@ body.lock {
   margin-bottom: 33px;
 }
 
+@media (max-width: 1200px) {
+  .manager {
+    margin-top: 68px;
+  }
+  .manager__img {
+    padding-left: 0;
+  }
+  .manager__img img {
+    left: -40px;
+    width: 360px;
+  }
+  .manager__right {
+    padding-right: 0px;
+    padding-left: 20px;
+    width: 60%;
+  }
+  .manager__btn {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .manager__right {
+    padding-right: 29px;
+    width: auto;
+  }
+  .manager__title {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+  }
+  .manager__img img {
+    left: -30px;
+  }
+  .manager__list-item {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .manager__btn {
+    margin: 25px 0 30px;
+    width: 240px;
+    height: 44px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 767px) {
+  .manager {
+    margin-top: 150px;
+  }
+  .manager__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .manager__right {
+    z-index: 3;
+    background: #f3f4fd;
+    padding-left: 20px;
+  }
+  .manager__img img {
+    bottom: auto;
+    top: -285px;
+    left: 0px;
+    z-index: 2;
+  }
+  .manager__btn {
+    margin: 30px auto 30px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 260px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .manager {
+    background: #f3f4fd;
+  }
+  .manager__right {
+    padding: 0;
+  }
+  .manager__img img {
+    left: -35px;
+  }
+}
+
+@media (max-width: 376px) {
+  .manager {
+    margin-top: 125px;
+  }
+  .manager__img img {
+    max-width: 300px;
+    left: -30px;
+    top: -230px;
+  }
+}
+
 .map {
   margin-top: 30px;
 }
@@ -1240,11 +1342,16 @@ body.lock {
   border-radius: 6px;
 }
 
+.map__btn_close {
+  display: none;
+}
+
 .map__input {
   margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1264,11 +1371,71 @@ body.lock {
 }
 
 .map__msk {
+  display: none;
   margin: 26px auto 42px;
+  padding: 0 50px;
 }
 
 .map__msk ymaps {
   margin: auto;
+}
+
+.map__spb {
+  display: none;
+  margin: 26px auto 42px;
+  padding: 0 50px;
+}
+
+.map__spb ymaps {
+  margin: auto;
+}
+
+@media (max-width: 1200px) {
+  .map__left {
+    padding-left: 23px;
+  }
+  .map__title {
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .map__msk {
+    padding: 0 23px;
+  }
+  .map__spb {
+    padding: 0 23px;
+  }
+}
+
+@media (max-width: 767px) {
+  .map__title {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .map__btn {
+    margin: 35px 0 22px;
+    width: 180px;
+    height: 38px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .map {
+    background: linear-gradient(279.13deg, #f9edec -0.93%, #f3f4fd 65.94%);
+  }
+  .map__left {
+    padding-left: 0;
+  }
+  .map__msk {
+    padding: 0;
+  }
+  .map__spb {
+    padding: 0;
+  }
 }
 
 .tarif__block {
@@ -1327,10 +1494,16 @@ body.lock {
   background-color: #E22F22;
 }
 
+.tires__link2 {
+  display: none;
+}
+
 .tarifs {
   display: -ms-grid;
   display: grid;
   row-gap: 6px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .tarifs__seasons {
@@ -1346,6 +1519,8 @@ body.lock {
           align-items: baseline;
   background: #f9f9f9;
   border: 1px solid #f0f0f0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .tarifs__left {
@@ -1370,6 +1545,8 @@ body.lock {
 .tarifs__right {
   padding: 0 40px 15px 0;
   width: 408px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .tarifs__list-item {
@@ -1377,6 +1554,212 @@ body.lock {
   font-size: 14px;
   line-height: 24px;
   color: #555555;
+}
+
+@media (max-width: 1200px) {
+  .tarif__blocks {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tarif__block {
+    margin-top: 50px;
+  }
+  .tarif__right {
+    margin-top: 25px;
+  }
+  .tires {
+    padding: 0;
+    background: #fff;
+    border: none;
+    text-align: center;
+  }
+  .tires__descr {
+    max-width: none;
+  }
+  .tires__link {
+    display: none;
+  }
+  .tires__link2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 30px auto 50px;
+    width: 240px;
+    height: 44px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .tires__subtitle {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tarif__title {
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .tires__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .tires__descr {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #383838;
+  }
+  .tires__subtitle {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tarif__block {
+    margin-top: 30px;
+  }
+  .tarifs__seasons {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #ffffff;
+    -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .tarifs__seasons::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background-color: #4628A5;
+    border-radius: 6px 0px 0px 6px;
+  }
+  .tarifs__left {
+    padding: 18px 20px;
+  }
+  .tarifs__left::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 23px;
+    height: 13px;
+    background: url("../img/arrow-down.svg") no-repeat center center/cover;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .tarifs__right {
+    padding: 0;
+    width: auto;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: all ease-in 0.2s;
+    transition: all ease-in 0.2s;
+  }
+  .tarifs__title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .tarifs__title span {
+    display: none;
+  }
+  .tarifs__seasons.active .tarifs__seasons::after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    top: 20px;
+  }
+  .tarifs__seasons.active .tarifs__left::after {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    top: 20px;
+  }
+  .tarifs__seasons.active .tarifs__right {
+    display: block;
+    -webkit-animation-name: fade;
+            animation-name: fade;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    height: auto;
+    -webkit-transition: all ease-out 0.2s;
+    transition: all ease-out 0.2s;
+    padding: 10px 41px 30px;
+    color: #4628A5;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .tarifs__seasons {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .tarifs__list-item {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+
+@media (max-width: 576px) {
+  .tarif__title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+    color: #000000;
+  }
+  .tires__title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .tires__descr {
+    text-align: left;
+    font-size: 14px;
+    line-height: 24px;
+    color: #383838;
+  }
+  .tires__subtitle {
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .tires__link2 {
+    width: 260px;
+    height: 48px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .tarifs {
+    row-gap: 12px;
+  }
 }
 
 .slider__block {
@@ -1604,7 +1987,14 @@ body.lock {
 }
 
 .questions__subtitle {
-  padding: 23px 41px;
+  padding: 0px 41px;
+  height: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 18px;
   line-height: 26px;
   color: #383833;
@@ -1615,7 +2005,7 @@ body.lock {
   display: block;
   position: absolute;
   right: 30px;
-  top: 50%;
+  top: 35px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   width: 23px;
@@ -1637,6 +2027,7 @@ body.lock {
   margin: 50px auto 0;
   font-weight: bold;
   letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .questions__list-item.active .questions__subtitle:after {
@@ -1644,7 +2035,7 @@ body.lock {
           transform: rotate(180deg);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  top: auto;
+  top: 30px;
 }
 
 .questions__list-item.active .questions__text {
@@ -1665,6 +2056,60 @@ body.lock {
 .questions__list-item {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+@media (max-width: 992px) {
+  .questions__block {
+    margin-top: 50px;
+  }
+  .questions__title {
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .questions__subtitle {
+    padding-left: 20px;
+    font-size: 16px;
+  }
+  .questions__subtitle::after {
+    right: 20px;
+  }
+  .questions__link {
+    margin-top: 30px;
+    width: 240px;
+    height: 44px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+  .questions__list-item.active .questions__text {
+    font-size: 16px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .questions__title {
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .questions__subtitle {
+    height: 118px;
+    padding-right: 50px;
+  }
+  .questions__subtitle::after {
+    top: 56px;
+  }
+  .questions__list-item.active .questions__subtitle:after {
+    top: 56px;
+  }
+  .questions__list-item.active .questions__text {
+    padding: 0px 20px 15px;
+  }
 }
 
 .footer {
@@ -1755,8 +2200,109 @@ body.lock {
   line-height: 17px;
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
-  text-transform: uppercase;
   color: #555555;
+}
+
+.footer__review_mob {
+  display: none;
+}
+
+.footer__mob {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .footer__blocks {
+    -ms-grid-columns: 650px 280px;
+        grid-template-columns: 650px 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    margin-top: 50px;
+  }
+  .footer__blocks {
+    padding: 20px 0 25px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 130px;
+  }
+  .footer__title {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000000;
+  }
+  .footer__info {
+    margin-top: 36px;
+  }
+  .footer__foot {
+    margin-top: 30px;
+  }
+  .footer__img {
+    width: 113px;
+    height: 69px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__blocks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  .footer__title {
+    text-align: center;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .footer__info, .footer__copyright, .footer__review {
+    display: none;
+  }
+  .footer__foot {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .footer__review_mob {
+    margin-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer__mob {
+    display: block;
+  }
+  .footer__mob_i {
+    font-size: 13px;
+    line-height: 17px;
+    -webkit-text-decoration-line: underline;
+            text-decoration-line: underline;
+    color: #555555;
+  }
+  .footer__mob_c {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #979797;
+  }
+  .footer__img {
+    margin-left: 20px;
+    width: 110px;
+    height: 67px;
+  }
 }
 
 @media (max-width: 1200px) {

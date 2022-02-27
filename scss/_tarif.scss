@@ -49,12 +49,16 @@
 		line-height: 22px;
 		background-color: $second-color;
 	}
+	&__link2 {
+		display: none;
+	}
 }
 
 .tarifs {
 	display: grid;
 	// grid-template-rows: 126px 126px 173px;
 	row-gap: 6px;
+	transition: all 0.5s;
 	&__seasons {
 		padding: 14px 0 0 16px;
 		display: flex;
@@ -62,6 +66,7 @@
 		align-items: baseline;
 		background: #f9f9f9;
 		border: 1px solid #f0f0f0;
+		transition: all 0.5s;
 	}
 	&__left {
 		display: flex;
@@ -78,6 +83,7 @@
 	&__right {
 		padding: 0 40px 15px 0;
 		width: 408px;
+		transition: all 0.5s;
 	}
 	&__list {
 		&-item {
@@ -86,5 +92,234 @@
 			line-height: 24px;
 			color: #555555;
 		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.tarif {
+		&__blocks {
+			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+		}
+		&__block {
+			margin-top: 50px;
+		}
+		&__right {
+			margin-top: 25px;
+		}
+	}
+	.tires {
+		padding: 0;
+		background: #fff;
+		border: none;
+		text-align: center;
+		&__descr {
+			max-width: none;
+		}
+		&__link {
+			display: none;
+		}
+		&__link2 {
+			display: flex;
+			margin: 30px auto 50px;
+			width: 240px;
+			height: 44px;
+			font-weight: normal;
+			font-size: 18px;
+			line-height: 22px;
+		}
+		&__subtitle {
+			margin-top: 10px;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.tarif {
+		&__title {
+			font-weight: normal;
+			font-size: 26px;
+			line-height: 36px;
+		}
+	}
+	.tires {
+		&__title {
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 28px;
+		}
+		&__descr {
+			font-size: 14px;
+			line-height: 24px;
+			text-align: center;
+			color: #383838;
+		}
+		&__subtitle {
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 24px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.tarif {
+		&__block {
+			margin-top: 30px;
+			// text-align: left;
+		}
+	}
+	.tarifs {
+		&__seasons {
+			position: relative;
+			cursor: pointer;
+			// padding: 18px 0;
+			padding: 0;
+			flex-direction: column;
+			background: #ffffff;
+			box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+			border-radius: 6px;
+			transition: all 0.5s;
+			&::before {
+				content: "";
+				display: block;
+				position: absolute;
+				width: 6px;
+				height: 100%;
+				background-color: $third-color;
+				border-radius: 6px 0px 0px 6px;
+			}
+			// &::after {
+			// 	content: "";
+			// 	display: block;
+			// 	position: absolute;
+			// 	right: 20px;
+			// 	top: 50%;
+			// 	transform: translateY(-50%);
+			// 	width: 23px;
+			// 	height: 13px;
+			// 	background: url("../img/arrow-down.svg") no-repeat center center / cover;
+			// 	transition: all 0.5s;
+			// }
+		}
+		&__left {
+			padding: 18px 20px;
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				right: 20px;
+				top: 30px;
+				transform: translateY(-50%);
+				width: 23px;
+				height: 13px;
+				background: url("../img/arrow-down.svg") no-repeat center center / cover;
+				transition: all 0.5s;
+			}
+		}
+		&__right {
+			// display: none;
+			// padding-top: 0;
+			padding: 0;
+			width: auto;
+			display: block;
+			height: 0;
+			overflow: hidden;
+			transition: all ease-in 0.2s;
+		}
+		&__title {
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 24px;
+			span {
+				display: none;
+			}
+		}
+	}
+	.tarifs__seasons.active {
+		.tarifs__seasons::after {
+			transform: rotate(180deg);
+			transition: all 0.5s;
+			top: 20px;
+		}
+	}
+	// .tarifs__seasons.active .tarifs__seasons::after {
+	// 	transform: rotate(180deg);
+	// 	transition: all 0.5s;
+	// 	top: 20px;
+	// 	// top: auto;
+	// }
+	// .tarifs__seasons.active::after {
+	// 	transform: rotate(180deg);
+	// 	transition: all 0.5s;
+	// 	// top: 50%;
+	// }
+	// }
+	.tarifs__seasons.active .tarifs__left::after {
+		transform: rotate(180deg);
+		transition: all 0.5s;
+		top: 20px;
+	}
+
+	.tarifs__seasons.active .tarifs__right {
+		display: block;
+		animation-name: fade;
+		animation-duration: 1s;
+		height: auto;
+		transition: all ease-out 0.2s;
+		padding: 10px 41px 30px;
+		color: $third-color;
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	.tarifs__seasons {
+		transition: all 0.5s;
+	}
+
+	.tarifs__list-item {
+		transition: all 0.5s;
+	}
+}
+@media (max-width: 576px) {
+	.tarif {
+		&__title {
+			text-align: left;
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 31px;
+			color: #000000;
+		}
+	}
+	.tires {
+		&__title {
+			text-align: left;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 30px;
+		}
+		&__descr {
+			text-align: left;
+			font-size: 14px;
+			line-height: 24px;
+			color: #383838;
+		}
+		&__subtitle {
+			text-align: left;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 24px;
+		}
+		&__link2 {
+			// margin-top: 30px;
+			width: 260px;
+			height: 48px;
+			font-size: 16px;
+			line-height: 20px;
+		}
+	}
+	.tarifs {
+		row-gap: 12px;
 	}
 }

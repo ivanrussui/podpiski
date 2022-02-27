@@ -1,4 +1,4 @@
-// аккордион
+// аккордион вопросы
 
 const questionsListItem = document.querySelectorAll('.questions__list-item');
 
@@ -12,6 +12,21 @@ questionsListItem.forEach((item) => {
   });
 });
 
+
+
+// аккордион тариф
+
+const tarifsSeasons= document.querySelectorAll('.tarifs__seasons');
+
+tarifsSeasons.forEach((item) => {
+  item.addEventListener('click', () => {
+    if (item.classList.contains('active')) {
+      item.classList.remove('active');
+    } else {
+      item.classList.add('active');
+    }
+  });
+});
 
 
 

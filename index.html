@@ -459,14 +459,14 @@
 
 					<form action="#" id="form" class="form">
 						<!-- <div class="form__up"> -->
-							<div class="form__input">
-								<input required name="name" id="name" type="text" placeholder="Имя">
-								<label class="label_basic" for="name"></label>
-							</div>
-							<div class="form__input">
-								<input required name="phone" id="phone" placeholder="Телефон">
-								<label class="label_basic" for="phone"></label>
-							</div>
+						<div class="form__input">
+							<input required name="name" id="name" type="text" placeholder="Имя">
+							<label class="label_basic" for="name"></label>
+						</div>
+						<div class="form__input">
+							<input required name="phone" id="phone" placeholder="Телефон">
+							<label class="label_basic" for="phone"></label>
+						</div>
 						<!-- </div> -->
 						<!-- <div class="form__down"> -->
 						<div class="form__textarea">
@@ -482,7 +482,7 @@
 							</span>
 						</div>
 						<button type="submit" class="btn form__btn">Отправить</button>
-					<!-- </div> -->
+						<!-- </div> -->
 					</form>
 
 				</div>
@@ -490,12 +490,15 @@
 		</div>
 	</section>
 
-	<!-- <section class="manager">
+	<section class="manager">
 		<div class="container">
 			<div class="manager__block">
 				<div class="manager__left">
 					<div class="manager__img">
-						<img src="./img/manager-bg.png" alt="manager">
+						<picture>
+							<source media="(max-width: 1200px)" srcset="./img/manager-bg-plans.png">
+							<img src="./img/manager-bg.png" alt="manager">
+						</picture>
 					</div>
 				</div>
 				<div class="manager__right">
@@ -525,15 +528,16 @@
 				</div>
 			</div>
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section class="map">
+	<section class="map">
 		<div class="container">
 			<div class="map__block">
 				<div class="map__blocks">
 					<div class="map__left">
 						<h2 class="map__title">Большая сеть шинных и сервисных центров КОЛЕСО.ру в Москве и Санкт-Петербурге</h2>
-						<div class="map__btn">Скрыть карту</div>
+						<div class="map__btn map__btn_open">Смотреть на карте</div>
+						<div class="map__btn map__btn_close">Скрыть карту</div>
 						<div class="map__input">
 							<input checked type="radio" id="contactChoice1" name="contact" value="msk">
 							<label for="contactChoice1">Москва</label>
@@ -544,20 +548,25 @@
 
 					<div class="map__right">
 						<div class="map__img">
-							<img src="./img/map-bg.svg" alt="map">
+							<picture>
+								<source media="(max-width: 767px)" srcset="./img/map-bg-mob.png">
+								<source media="(max-width: 992px)" srcset="./img/map-bg-plans.png">
+								<img src="./img/map-bg.svg" alt="map">
+							</picture>
+							
 						</div>
 					</div>
 				</div>
 
 				<div class="map__msk">
 					<script type="text/javascript" charset="utf-8" async
-						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A438a676d4f09201f87ab29be69cdd12e04f16a182afc2b182a1850a79d8f99fe&amp;width=1040&amp;height=460&amp;lang=ru_RU&amp;scroll=true">
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A438a676d4f09201f87ab29be69cdd12e04f16a182afc2b182a1850a79d8f99fe&amp;width=100%&amp;height=460&amp;lang=ru_RU&amp;scroll=true">
 					</script>
 				</div>
 
 				<div class="map__spb">
 					<script type="text/javascript" charset="utf-8" async
-						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad609fc6fd4745f2a6a8d83f18bf59c9e58bfa51d7aa8c53943b080653b0325e4&amp;width=1040&amp;height=460&amp;lang=ru_RU&amp;scroll=true">
+						src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad609fc6fd4745f2a6a8d83f18bf59c9e58bfa51d7aa8c53943b080653b0325e4&amp;width=100%&amp;height=460&amp;lang=ru_RU&amp;scroll=true">
 					</script>
 				</div>
 
@@ -565,9 +574,9 @@
 
 
 		</div>
-	</section> -->
+	</section>
 
-	<!-- <section class="tarif__block" id="tarif">
+	<section class="tarif__block" id="tarif">
 		<div class="container tarif__container">
 			<h2 class="tarif__title">
 				Какой тариф вам подходит?
@@ -593,13 +602,13 @@
 				<div class="tarif__right">
 					<div class="tarif__tarifs tarifs">
 
-						<div class="tarifs__seasons winter">
+						<div class="tarifs__seasons">
 							<div class="tarifs__left">
 								<div class="tarifs__img">
 									<img src="./img/winter.svg" alt="winter">
 								</div>
 								<h3 class="tarifs__title">
-									Тариф «Базовый — зима»
+								  <span>Тариф</span> «Базовый — зима»
 								</h3>
 							</div>
 
@@ -623,13 +632,13 @@
 
 						</div>
 
-						<div class="tarifs__seasons summer">
+						<div class="tarifs__seasons">
 							<div class="tarifs__left">
 								<div class="tarifs__img">
 									<img src="./img/summer.svg" alt="summer">
 								</div>
 								<h3 class="tarifs__title">
-									Тариф «Базовый — лето»
+								<span>Тариф</span> «Базовый — лето»
 								</h3>
 
 							</div>
@@ -653,13 +662,13 @@
 							</div>
 						</div>
 
-						<div class="tarifs__seasons all-year">
+						<div class="tarifs__seasons">
 							<div class="tarifs__left">
 								<div class="tarifs__img">
 									<img src="./img/all-year.svg" alt="all-year">
 								</div>
 								<h3 class="tarifs__title">
-									Тариф «Круглый год»
+									<span>Тариф</span> «Круглый год»
 								</h3>
 							</div>
 
@@ -687,8 +696,13 @@
 					</div>
 				</div>
 			</div>
+
+			<a href="https://365.koleso.ru/" target="_blank" class="btn tires__link2">
+				Узнать свою цену
+			</a>
+
 		</div>
-	</section> -->
+	</section>
 
 	<!-- <section class="slider__block" id="slider">
 		<div class="container slider__container">
@@ -1134,7 +1148,7 @@
 	</div> -->
 
 
-	<!-- <section class="questions questions__block" id="questions">
+	<section class="questions questions__block" id="questions">
 		<div class="container questions__container">
 			<h2 class="questions__title">О чем часто спрашивают</h2>
 
@@ -1242,13 +1256,13 @@
 			</ul>
 
 			<a href="https://365.koleso.ru/" target="_blank" class="btn questions__link">
-				ОФОРМИТЬ ПОДПИСКУ
+				Оформить подписку
 			</a>
 		</div>
-	</section> -->
+	</section>
 
 
-	<!-- <footer class="footer footer__block">
+	<footer class="footer footer__block">
 		<div class="container footer__container">
 			<div class="footer__blocks">
 				<div class="footer__left">
@@ -1288,8 +1302,20 @@
 							<img src="./img/social/vk.svg" alt="vk">
 
 						</a>
+					
 					</div>
+
+					<div class="footer__review_mob">
+						<a href="https://market.yandex.ru/shop--koleso-ru/104575/reviews/" target="_blank">
+							<img src="./img/yandex.svg" alt="yandex">
+						</a>
+						<a href="https://www.drive2.ru/o/koleso-ru#reviews/" target="_blank">
+							<img src="./img/drive.svg" alt="drive">
+						</a>
+					</div>
+
 					<div class="footer__foot">
+
 						<div class="footer__review">
 							<div class="footer__review_img">
 								<img src="./img/star.svg" alt="star">
@@ -1306,6 +1332,18 @@
 							<a href="https://www.drive2.ru/o/koleso-ru#reviews/" target="_blank"
 								class="footer__review_link">DRIVE2.RU</a>
 						</div>
+
+						<div class="footer__mob">
+							<a href="https://koleso.ru/contacts/" class="footer__mob_i">
+								Контактная информация
+							</a>
+		
+							<div class="footer__mob_c">
+								2005-2022 © Сеть шинных и сервисных центров КОЛЕСО.ру
+							</div>
+						</div>
+
+
 						<a href="https://koleso.ru/michelin-rekomenduet-sait-koleso/" class="footer__img">
 							<img src="./img/michelin.svg" alt="michelin">
 						</a>
@@ -1313,7 +1351,7 @@
 				</div>
 			</div>
 		</div>
-	</footer> -->
+	</footer>
 
 
 	<!-- Tiny Slider  -->

@@ -8,7 +8,6 @@
 	&__blocks {
 		display: flex;
 		justify-content: space-between;
-
 	}
 	&__left {
 		padding-left: 50px;
@@ -32,10 +31,16 @@
 		line-height: 22px;
 		border: 1px solid $third-color;
 		border-radius: 6px;
+		&_close {
+			display: none;
+		}
+		// &_open {
+		// }
 	}
 	&__input {
 		margin-top: 30px;
 		display: flex;
+		display: none;
 		align-items: center;
 		input {
 			margin-right: 8px;
@@ -50,22 +55,90 @@
 		}
 	}
 	&__msk {
+		display: none;
+		// background: linear-gradient(279.13deg, #f9edec -0.93%, #f3f4fd 65.94%);
+		// display: none;
 		// margin: 0 auto;
 		// margin-top: 26px;
 		margin: 26px auto 42px;
+		padding: 0 50px;
+		// padding-right: 50px;
+		// width: 100%;
 		// text-align: center;
+		ymaps {
+			// margin: 26px auto 42px;
+			margin: auto;
+		}
+	}
+	// &__wrap {
+	// 	// padding: 0 50px;
+	// }
+	&__spb {
+		display: none;
+		// // 	// margin: 0 auto;
+		// // 	// margin-top: 26px;
+		margin: 26px auto 42px;
+		padding: 0 50px;
+		// // 	// text-align: center;
 		ymaps {
 			margin: auto;
 		}
 	}
-	// &__spb {
-	// 	display: none;
-	// // 	// margin: 0 auto;
-	// // 	// margin-top: 26px;
-	// // 	margin: 26px auto 42px;
-	// // 	// text-align: center;
-	// // 	ymaps {
-	// // 		margin: auto;
-	// // 	}
-	// }
+}
+
+@media (max-width: 1200px) {
+	.map {
+		&__left {
+			padding-left: 23px;
+		}
+		&__title {
+			padding-top: 20px;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 28px;
+		}
+		&__msk {
+			padding: 0 23px;
+		}
+		&__spb {
+			padding: 0 23px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.map {
+		&__title {
+			font-weight: normal;
+			font-size: 14px;
+			line-height: 24px;
+		}
+		// &__img {
+		// 	img {
+		// 		// ! временно отключил так как картинка кривая в макете и происходит ужас если ее добавлять
+		// 		// display: none;
+		// 	}
+		// }
+		&__btn {
+			margin: 35px 0 22px;
+			width: 180px;
+			height: 38px;
+			font-size: 16px;
+			line-height: 22px;
+		}
+	}
+}
+@media (max-width: 576px) {
+	.map {
+		background: linear-gradient(279.13deg, #f9edec -0.93%, #f3f4fd 65.94%);
+		&__left {
+			padding-left: 0;
+		}
+		&__msk {
+			padding: 0;
+		}
+		&__spb {
+			padding: 0;
+		}
+	}
 }
