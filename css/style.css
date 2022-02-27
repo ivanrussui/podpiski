@@ -733,14 +733,13 @@ body.lock {
 
 @media (max-width: 767px) {
   .registr {
-    padding-bottom: 150px;
+    padding-bottom: 144px;
   }
   .registr__points {
     max-width: none;
   }
   .registr__img {
     top: auto;
-    bottom: 0;
     right: auto;
     width: 320px;
     height: 145px;
@@ -1958,6 +1957,10 @@ body.lock {
 
 .tns-nav .tns-nav-active {
   background-color: #fff;
+}
+
+.tns-ovh {
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
