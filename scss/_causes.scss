@@ -204,6 +204,9 @@
 			border-radius: 6px;
 			padding: 12px 0 0 12px;
 			margin-right: 12px;
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 		&__up {
 			display: flex;
