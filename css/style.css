@@ -688,7 +688,7 @@ body.lock {
   position: absolute;
   z-index: 2222;
   right: 31px;
-  top: 18px;
+  top: -30px;
 }
 
 @media (max-width: 1200px) {
@@ -1343,14 +1343,26 @@ body.lock {
   line-height: 22px;
   border: 1px solid #4628A5;
   border-radius: 6px;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
 }
 
 .map__btn_close {
   display: none;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transition: 0.7s all;
+  transition: 0.7s all;
 }
 
 .map__input {
-  margin-top: 30px;
+  padding-left: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1361,12 +1373,14 @@ body.lock {
 }
 
 .map__input input {
+  cursor: pointer;
   margin-right: 8px;
   width: 20px;
   height: 20px;
 }
 
 .map__input label {
+  cursor: pointer;
   margin-right: 35px;
   font-size: 18px;
   line-height: 30px;
@@ -1381,6 +1395,8 @@ body.lock {
 
 .map__msk ymaps {
   margin: auto;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .map__spb {
@@ -1390,11 +1406,16 @@ body.lock {
 }
 
 .map__spb ymaps {
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   margin: auto;
 }
 
 @media (max-width: 1200px) {
   .map__left {
+    padding-left: 23px;
+  }
+  .map__input {
     padding-left: 23px;
   }
   .map__title {
@@ -1432,6 +1453,17 @@ body.lock {
   }
   .map__left {
     padding-left: 0;
+  }
+  .map__input {
+    padding-left: 0;
+  }
+  .map__input input {
+    width: 16px;
+    height: 16px;
+  }
+  .map__input label {
+    font-size: 14px;
+    line-height: 25px;
   }
   .map__msk {
     padding: 0;

@@ -12,7 +12,6 @@ questionsListItem.forEach((item) => {
   });
 });
 
-
 // аккордион тариф
 
 const tarifsSeasons = document.querySelectorAll('.tarifs__seasons');
@@ -27,13 +26,11 @@ tarifsSeasons.forEach((item) => {
   });
 });
 
-
 // menu mobile
 const hamburger = document.querySelector('.hamburger');
 const menu = document.querySelector('.menu');
 const menuClose = document.querySelector('.menu__close');
 const bodyLock = document.querySelector('body');
-
 
 hamburger.addEventListener('click', () => {
   menu.classList.add('active');
@@ -54,13 +51,12 @@ const slider = tns({
   controls: false,
 });
 
-
 // кнопки для слайдера
 document.querySelector('.slider__prev').addEventListener('click', () => {
-	slider.goTo('prev');
+  slider.goTo('prev');
 });
 document.querySelector('.slider__next').addEventListener('click', () => {
-	slider.goTo('next');
+  slider.goTo('next');
 });
 
 const sliderOpen = document.querySelectorAll('.slider__open');
@@ -68,58 +64,72 @@ const sliderClose = document.querySelectorAll('.slider__close');
 const sliderThesis = document.querySelectorAll('.slider__thesis');
 const sliderText = document.querySelectorAll('.slider__text');
 
-console.log(sliderOpen);
-
 sliderOpen.forEach((item) => {
   item.addEventListener('click', () => {
-		sliderThesis.forEach((item) => {
-			item.style.display = 'none';
-		})
+    sliderThesis.forEach((item) => {
+      item.style.display = 'none';
+    });
     sliderText.forEach((item) => {
-			item.style.display = 'block';
-		})
-		sliderClose.forEach((item) => {
-			item.style.display = 'flex';
-		})
-		sliderOpen.forEach((item) => {
-			item.style.display = 'none';
-		})
+      item.style.display = 'block';
+    });
+    sliderClose.forEach((item) => {
+      item.style.display = 'flex';
+    });
+    sliderOpen.forEach((item) => {
+      item.style.display = 'none';
+    });
   });
 });
 
 sliderClose.forEach((item) => {
   item.addEventListener('click', () => {
-		sliderThesis.forEach((item) => {
-			item.style.display = 'block';
-		})
+    sliderThesis.forEach((item) => {
+      item.style.display = 'block';
+    });
     sliderText.forEach((item) => {
-			item.style.display = 'none';
-		})
-		sliderClose.forEach((item) => {
-			item.style.display = 'none';
-		})
-		sliderOpen.forEach((item) => {
-			item.style.display = 'flex';
-		})
+      item.style.display = 'none';
+    });
+    sliderClose.forEach((item) => {
+      item.style.display = 'none';
+    });
+    sliderOpen.forEach((item) => {
+      item.style.display = 'flex';
+    });
   });
 });
 
+// map
 
-// slider old
+const mapBtnOpen = document.querySelector('.map__btn_open');
+const mapBtnClose = document.querySelector('.map__btn_close');
+const mapMsk = document.querySelector('.map__msk');
+const mapSpb = document.querySelector('.map__spb');
+const mapInput = document.querySelector('.map__input');
+const contactChoice1 = document.querySelector('#contactChoice1');
+const contactChoice2 = document.querySelector('#contactChoice2');
 
-// const historyLink1 = document.querySelector('.history__link1');
-// const historyLink2 = document.querySelector('.history__link2');
-// const historyLink3 = document.querySelector('.history__link3');
-// const historyLink4 = document.querySelector('.history__link4');
-// const overlay = document.querySelector('.overlay');
-// const sliderBlock2 = document.querySelector('.slider__block2');
-// // const bodyLock = document.querySelector('body');
-// const questionsList = document.querySelector('.questions__list');
-// const tns1Ow = document.querySelector('#tns1-ow');
+mapBtnOpen.addEventListener('click', () => {
+  mapBtnClose.style.display = 'flex';
+  mapBtnOpen.style.display = 'none';
+  mapInput.style.display = 'flex';
+  mapMsk.style.display = 'block';
+});
 
-// historyLink1.addEventListener('click', () => {
-// overlay.style.display = 'block';
-// questionsList.style.display = 'none';
-// bodyLock.classList.add('lock');
-// tns1Ow.style.display = 'none';
-// });
+
+mapBtnClose.addEventListener('click', () => {
+  mapBtnClose.style.display = 'none';
+  mapBtnOpen.style.display = 'flex';
+  mapInput.style.display = 'none';
+  mapMsk.style.display = 'none';
+  mapSpb.style.display = 'none';
+});
+
+contactChoice2.addEventListener('click', () => {
+	mapMsk.style.display = 'none';
+	mapSpb.style.display = 'block'
+})
+
+contactChoice1.addEventListener('click', () => {
+	mapMsk.style.display = 'block';
+	mapSpb.style.display = 'none';
+})
