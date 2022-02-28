@@ -1,3 +1,58 @@
+// menuFixed
+const header = document.querySelector('header');
+// const headerUp = document.querySelector('.header__up');
+
+if( window.innerWidth >=  1201){
+	headerTop();
+} 
+
+function headerTop() {
+	window.addEventListener('scroll', () => {
+		if (window.pageYOffset >= '50') {
+			header.style.cssText = `
+			position: fixed; 
+			top: -22px;
+			left: 50%;
+			transform: translateX(-50%);
+			// padding: 22px auto;
+			// padding-top: 22px;
+			height: 90px;
+			transition: .1s all;
+			z-index: 7777;
+			background: #fff;
+			margin: 22px auto;
+			width: 100%;
+			box-shadow: 0 1px 5px rgb(0 0 0 / 14%);
+			// border: 2px solid #E22F22;
+			`;
+		} else {
+			header.style.cssText = 'position: relative; transition: .1s all;';
+		}
+	});
+	
+}
+
+// function headerTopMob() {
+// 	window.addEventListener('scroll', () => {
+// 		if (window.pageYOffset >= '50') {
+// 			headerUp.style.cssText = `
+// 			position: fixed; 
+// 			top: 0;
+// 			left: 50%;
+// 			transform: translateX(-50%);
+// 			transition: .1s all;
+// 			z-index: 7777;
+// 			width: 100%;
+// 			`;
+// 		} else {
+// 			headerMob.style.cssText = 'position: relative; transition: .1s all;';
+// 		}
+// 	});
+	
+// }
+
+
+
 // аккордион вопросы
 const questionsListItem = document.querySelectorAll('.questions__list-item');
 
@@ -47,12 +102,33 @@ for (let i = 0; i < menuLinks.length; i++) {
   menuLinks[i].addEventListener('click', () => {
     menu.classList.remove('active');
     bodyLock.classList.remove('lock');
-    // title.style.display = 'block';
-    // subTitle.style.display = 'block';
-    // promoBtn.style.display = 'flex';
-    // downArrow.style.display = 'block';
   });
 }
+
+// modal
+const managerBtn = document.querySelector('.manager__btn');
+const modalClose = document.querySelector('.modal__close');
+const overlay = document.querySelector('.overlay');
+const modal = document.querySelector('.modal');
+const modal2 = document.querySelector('.modal2');
+const modal2Close = document.querySelector('.modal2__close');
+
+managerBtn.addEventListener('click', () => {
+  overlay.style.display = 'block';
+  bodyLock.classList.add('lock');
+	modal.style.display = 'block';
+});
+
+modalClose.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  bodyLock.classList.remove('lock');
+});
+
+modal2Close.addEventListener('click', () => {
+  modal2.style.display = 'none';
+  overlay.style.display = 'none';
+	bodyLock.classList.remove('lock');
+});
 
 // Tiny Slider
 const slider = tns({
@@ -146,13 +222,37 @@ contactChoice1.addEventListener('click', () => {
 
 // jQuery
 $(document).ready(function () {
-
-	
   // плавность перехода по всем ссылкам на сайте
   $("a[href^='#']").click(function () {
     const _href = $(this).attr('href');
     $('html, body').animate({
       scrollTop: $(_href).offset().top + 'px',
+    });
+    return false;
+  });
+
+  // Masked Input
+  $('input[name=phone').mask('+7 (999) 999-9999');
+  $('input[name=phone2').mask('+7 (999) 999-9999');
+
+  // Ajax
+  $('form').submit(function (e) {
+    e.preventDefault();
+
+    // if (!$(this).valid()) {
+    //   return;
+    // }
+
+    $.ajax({
+      type: 'POST',
+      url: 'mailer/smart.php',
+      data: $(this).serialize(),
+    }).done(function () {
+      $(this).find('input').val('');
+      $('#modal').fadeOut();
+      $('#overlay, #thanks').fadeIn('750');
+
+      $('form').trigger('reset');
     });
     return false;
   });

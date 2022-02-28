@@ -1,8 +1,5 @@
 .manager {
-	// margin-top: 95px;
 	margin-top: 161px;
-
-	// padding-top: 54px;
 	&__block {
 		position: relative;
 		display: flex;
@@ -10,7 +7,6 @@
 		background: #f3f4fd;
 		border: 1px solid #f0f0f0;
 		border-radius: 6px;
-		// align-items: center;
 	}
 	&__img {
 		padding-left: 47px;
@@ -55,11 +51,9 @@
 			img {
 				left: -40px;
 				width: 360px;
-				// height: 415px;
 			}
 		}
 		&__right {
-			// margin-left: 70px;
 			padding-right: 0px;
 			padding-left: 20px;
 			width: 60%;
@@ -114,10 +108,6 @@
 			padding-left: 20px;
 		}
 		&__img img {
-			// width: 299.4px;
-			// height: 410.28px;
-			// left: -57.22px;
-			// top: 2637.5px;
 			bottom: auto;
 			top: -285px;
 			left: 0px;
@@ -140,8 +130,6 @@
 		}
 		&__img img {
 			left: -35px;
-			// max35idth: 400px;
-			// min-width: 300px;
 		}
 	}
 }
@@ -153,8 +141,6 @@
 			max-width: 300px;
 			left: -30px;
 			top: -230px;
-			// max-width: 400px;
-			// min-width: 300px;
 		}
 	}
 }

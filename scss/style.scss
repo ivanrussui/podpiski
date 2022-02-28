@@ -20,14 +20,12 @@ body.lock {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	// margin: 50px auto 0;
 	color: white;
 	width: 294px;
 	height: 50px;
 	border-radius: 6px;
 	font-size: 18px;
 	line-height: 22px;
-	// letter-spacing: 0.05em;
 	background-color: $second-color;
 }
 
@@ -42,5 +40,6 @@ body.lock {
 @import "_slider";
 @import "_questions";
 @import "_footer";
+@import "_modal";
 
 @import "_media";

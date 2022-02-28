@@ -37,11 +37,7 @@
 		line-height: 26px;
 	}
 	&__link {
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
 		margin-top: 73px;
-		// color: white;
 		width: 209px;
 		height: 40px;
 		border-radius: 6px;
@@ -56,7 +52,6 @@
 
 .tarifs {
 	display: grid;
-	// grid-template-rows: 126px 126px 173px;
 	row-gap: 6px;
 	transition: all 0.5s;
 	&__seasons {
@@ -167,14 +162,12 @@
 	.tarif {
 		&__block {
 			margin-top: 30px;
-			// text-align: left;
 		}
 	}
 	.tarifs {
 		&__seasons {
 			position: relative;
 			cursor: pointer;
-			// padding: 18px 0;
 			padding: 0;
 			flex-direction: column;
 			background: #ffffff;
@@ -190,18 +183,6 @@
 				background-color: $third-color;
 				border-radius: 6px 0px 0px 6px;
 			}
-			// &::after {
-			// 	content: "";
-			// 	display: block;
-			// 	position: absolute;
-			// 	right: 20px;
-			// 	top: 50%;
-			// 	transform: translateY(-50%);
-			// 	width: 23px;
-			// 	height: 13px;
-			// 	background: url("../img/arrow-down.svg") no-repeat center center / cover;
-			// 	transition: all 0.5s;
-			// }
 		}
 		&__left {
 			padding: 18px 20px;
@@ -219,8 +200,6 @@
 			}
 		}
 		&__right {
-			// display: none;
-			// padding-top: 0;
 			padding: 0;
 			width: auto;
 			display: block;
@@ -244,18 +223,6 @@
 			top: 20px;
 		}
 	}
-	// .tarifs__seasons.active .tarifs__seasons::after {
-	// 	transform: rotate(180deg);
-	// 	transition: all 0.5s;
-	// 	top: 20px;
-	// 	// top: auto;
-	// }
-	// .tarifs__seasons.active::after {
-	// 	transform: rotate(180deg);
-	// 	transition: all 0.5s;
-	// 	// top: 50%;
-	// }
-	// }
 	.tarifs__seasons.active .tarifs__left::after {
 		transform: rotate(180deg);
 		transition: all 0.5s;
@@ -312,7 +279,6 @@
 			line-height: 24px;
 		}
 		&__link2 {
-			// margin-top: 30px;
 			width: 260px;
 			height: 48px;
 			font-size: 16px;

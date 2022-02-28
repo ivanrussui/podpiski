@@ -1,11 +1,9 @@
 .map {
 	margin-top: 30px;
-	// transition: 0.3s all;
 	&__block {
 		background: linear-gradient(279.13deg, #f9edec -0.93%, #f3f4fd 65.94%);
 		border: 1px solid #f0f0f0;
 		border-radius: 6px;
-		// transition: 0.7s all;
 	}
 	&__blocks {
 		display: flex;
@@ -42,13 +40,9 @@
 			animation-duration: 1s;
 			transition: 0.7s all;
 		}
-		// &_open {
-		// }
 	}
 	&__input {
-		// cursor: pointer;
 		padding-left: 50px;
-		// margin-top: 30px;
 		display: flex;
 		display: none;
 		align-items: center;
@@ -68,36 +62,17 @@
 	}
 	&__msk {
 		display: none;
-		// animation-name: fade;
-		// animation-duration: 1s;
-		// transition: 0.2s all;
-		// background: linear-gradient(279.13deg, #f9edec -0.93%, #f3f4fd 65.94%);
-		// display: none;
-		// margin: 0 auto;
-		// margin-top: 26px;
 		margin: 26px auto 42px;
 		padding: 0 50px;
-		// padding-right: 50px;
-		// width: 100%;
-		// text-align: center;
 		ymaps {
-			// margin: 26px auto 42px;
 			margin: auto;
-			// animation-name: fade;
-			// animation-duration: 1s;
 			transition: 0.3s all;
 		}
 	}
-	// &__wrap {
-	// 	// padding: 0 50px;
-	// }
 	&__spb {
 		display: none;
-		// // 	// margin: 0 auto;
-		// // 	// margin-top: 26px;
 		margin: 26px auto 42px;
 		padding: 0 50px;
-		// // 	// text-align: center;
 		ymaps {
 			transition: 0.3s all;
 			margin: auto;
@@ -135,12 +110,6 @@
 			font-size: 14px;
 			line-height: 24px;
 		}
-		// &__img {
-		// 	img {
-		// 		// ! временно отключил так как картинка кривая в макете и происходит ужас если ее добавлять
-		// 		// display: none;
-		// 	}
-		// }
 		&__btn {
 			margin: 35px 0 22px;
 			width: 180px;
@@ -175,3 +144,60 @@
 		}
 	}
 }
+
+  /* для элемента input c type="radio" */
+  .custom-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+  /* для элемента label связанного с .custom-radio */
+  .custom-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  /* создание в label псевдоэлемента  before со следующими стилями */
+  // .custom-radio+label::before {
+  //   content: '';
+  //   display: inline-block;
+  //   width: 20px;
+  //   height: 20px;
+  //   flex-shrink: 0;
+  //   flex-grow: 0;
+  //   border: 1px solid #adb5bd;
+  //   border-radius: 50%;
+  //   margin-right: 0.5em;
+  //   background-repeat: no-repeat;
+  //   background-position: center center;
+  //   background-size: 50% 50%;
+  // }
+ 
+	.custom-radio+label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid $third-color;
+    border-radius: 50%;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10px 10px;
+    // background-size: 50% 50%;
+  }
+
+
+  .custom-radio:checked+label::before {
+    border-color: $third-color;
+    background-color: #fff;
+		background-image: url('data:image/svg+xml,%3Csvg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="5" cy="5.5" r="5" fill="%234628A5"/%3E%3C/svg%3E%0A');
+    // background-image: url("data:image/svg+xml,%3Csvg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="5" cy="5.5" r="5" fill="%234628A5"/%3E%3C/svg%3E%0A");
+    // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%4628A5'/%3e%3c/svg%3e");
+  }
+  /* стили для радиокнопки, находящейся в состоянии disabled */
+  .custom-radio:disabled+label::before {
+    background-color: #e9ecef;
+  }

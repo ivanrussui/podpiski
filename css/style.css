@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -280,6 +281,8 @@ body.lock {
   top: 0px;
   visibility: visible;
   opacity: 1;
+  z-index: 7777;
+  position: relative;
 }
 
 @media (max-width: 1200px) {
@@ -301,6 +304,7 @@ body.lock {
         -ms-flex-align: center;
             align-items: center;
     background: #EFEFEF;
+    position: relative;
   }
   .hamburger {
     display: block;
@@ -392,6 +396,24 @@ body.lock {
   }
   .menu.active {
     visibility: hidden;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav__link:hover {
+    color: #E22F22;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .nav__tires:hover {
+    color: #E22F22;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+  }
+  .links__auto:hover, .links__actions:hover {
+    color: #E22F22;
+    -webkit-transition: all .3s;
+    transition: all .3s;
   }
 }
 
@@ -854,6 +876,7 @@ body.lock {
 }
 
 .form__policy {
+  position: relative;
   margin-top: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -864,8 +887,55 @@ body.lock {
 }
 
 .form__policy input {
+  z-index: -1;
+  opacity: 0;
   width: 16px;
   height: 16px;
+}
+
+.form__policy .custom-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form__policy .custom-checkbox + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.form__policy .custom-checkbox + label::before {
+  content: '';
+  position: relative;
+  z-index: 4;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border-radius: 2px;
+  border: 1px solid #adb5bd;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 75% 75%;
+}
+
+.form__policy .custom-checkbox:checked + label::before {
+  border-color: #E22F22;
+  background-color: #E22F22;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
 }
 
 .form__policy span {
@@ -876,12 +946,16 @@ body.lock {
 }
 
 .form__policy span a {
+  position: relative;
+  z-index: 4;
   font-size: 13px;
   line-height: 16px;
   color: #E22F22;
 }
 
 .form__btn {
+  position: relative;
+  z-index: 4;
   margin-top: 41px;
   width: 181px;
   height: 40px;
@@ -1126,9 +1200,9 @@ body.lock {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    padding-left: 5px;
+    position: relative;
+    z-index: 4;
   }
   .form__btn {
     margin-top: 30px;
@@ -1471,6 +1545,57 @@ body.lock {
   .map__spb {
     padding: 0;
   }
+}
+
+/* для элемента input c type="radio" */
+.custom-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* для элемента label связанного с .custom-radio */
+.custom-radio + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* создание в label псевдоэлемента  before со следующими стилями */
+.custom-radio + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 1px solid #4628A5;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 10px 10px;
+}
+
+.custom-radio:checked + label::before {
+  border-color: #4628A5;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml,%3Csvg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="5" cy="5.5" r="5" fill="%234628A5"/%3E%3C/svg%3E%0A');
+}
+
+/* стили для радиокнопки, находящейся в состоянии disabled */
+.custom-radio:disabled + label::before {
+  background-color: #e9ecef;
 }
 
 .tarif__block {
@@ -2490,6 +2615,107 @@ body.lock {
   }
   .footer__img {
     margin-left: 20px;
+  }
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #e5e5e5;
+  z-index: 55555555555555;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 494px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 40px 0px 40px 40px;
+  border: 1px solid #312066;
+}
+
+.modal__close {
+  position: absolute;
+  top: 21px;
+  right: 21px;
+  cursor: pointer;
+}
+
+.modal__title {
+  font-size: 34px;
+  line-height: 50px;
+}
+
+.modal__subtitle {
+  padding-left: 6px;
+  margin: 29px 0 14px;
+  font-size: 16px;
+  line-height: 32px;
+  color: #383838;
+}
+
+.modal__btn {
+  margin-top: 14px;
+  width: 180px;
+  height: 40px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.form__input2 input {
+  width: 360px;
+}
+
+.modal2 {
+  display: none;
+  padding: 20px;
+  border: 1px solid #312066;
+}
+
+.modal2__subtitle {
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.modal2__close {
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .modal {
+    padding: 10px 10px 10px 10px;
+    width: 90%;
+    max-width: 450px;
+  }
+  .modal__title {
+    margin-top: 5px;
+    font-size: 22px;
+    line-height: 35px;
+  }
+  .modal__subtitle {
+    margin-top: 14px;
+  }
+  .modal__close {
+    top: 5px;
+    right: 5px;
+  }
+  .form__input2 input {
+    width: 100%;
+  }
+  .modal2__subtitle {
+    margin-top: 7px;
+    line-height: 24px;
   }
 }
 

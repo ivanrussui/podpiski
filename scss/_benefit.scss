@@ -1,15 +1,11 @@
 .benefit {
 	margin: 67px 0px 72px;
-	// margin: 67px 180px 72px;
 	&__blocks {
 		display: flex;
-		// width: 33%;
 		align-items: center;
 		justify-content: space-evenly;
-		// justify-content: space-between;
 	}
 	&__block {
-		// width: 230px;
 		max-width: 245px;
 		text-align: center;
 	}
@@ -33,7 +29,6 @@
 		margin: 50px auto;
 		&__blocks {
 			justify-content: space-between;
-			// flex-wrap: wrap;
 		}
 		&__block {
 			max-width: 222px;
