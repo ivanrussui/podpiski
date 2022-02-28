@@ -1,5 +1,4 @@
 // аккордион вопросы
-
 const questionsListItem = document.querySelectorAll('.questions__list-item');
 
 questionsListItem.forEach((item) => {
@@ -13,7 +12,6 @@ questionsListItem.forEach((item) => {
 });
 
 // аккордион тариф
-
 const tarifsSeasons = document.querySelectorAll('.tarifs__seasons');
 
 tarifsSeasons.forEach((item) => {
@@ -41,6 +39,20 @@ menuClose.addEventListener('click', () => {
   menu.classList.remove('active');
   bodyLock.classList.remove('lock');
 });
+
+// внутри бургера при переходе по ссылкам на стр закрытие бургера
+let menuLinks = document.querySelectorAll('.menu__link');
+
+for (let i = 0; i < menuLinks.length; i++) {
+  menuLinks[i].addEventListener('click', () => {
+    menu.classList.remove('active');
+    bodyLock.classList.remove('lock');
+    // title.style.display = 'block';
+    // subTitle.style.display = 'block';
+    // promoBtn.style.display = 'flex';
+    // downArrow.style.display = 'block';
+  });
+}
 
 // Tiny Slider
 const slider = tns({
@@ -99,7 +111,6 @@ sliderClose.forEach((item) => {
 });
 
 // map
-
 const mapBtnOpen = document.querySelector('.map__btn_open');
 const mapBtnClose = document.querySelector('.map__btn_close');
 const mapMsk = document.querySelector('.map__msk');
@@ -115,7 +126,6 @@ mapBtnOpen.addEventListener('click', () => {
   mapMsk.style.display = 'block';
 });
 
-
 mapBtnClose.addEventListener('click', () => {
   mapBtnClose.style.display = 'none';
   mapBtnOpen.style.display = 'flex';
@@ -125,11 +135,25 @@ mapBtnClose.addEventListener('click', () => {
 });
 
 contactChoice2.addEventListener('click', () => {
-	mapMsk.style.display = 'none';
-	mapSpb.style.display = 'block'
-})
+  mapMsk.style.display = 'none';
+  mapSpb.style.display = 'block';
+});
 
 contactChoice1.addEventListener('click', () => {
-	mapMsk.style.display = 'block';
-	mapSpb.style.display = 'none';
-})
+  mapMsk.style.display = 'block';
+  mapSpb.style.display = 'none';
+});
+
+// jQuery
+$(document).ready(function () {
+
+	
+  // плавность перехода по всем ссылкам на сайте
+  $("a[href^='#']").click(function () {
+    const _href = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(_href).offset().top + 'px',
+    });
+    return false;
+  });
+});
